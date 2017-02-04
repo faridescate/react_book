@@ -1,12 +1,11 @@
-html{
+html {
   box-sizing: border-box;
 }
-
-*, *:before, *:after{
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
-body{
+body {
   margin: 0;
   padding: 20px;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -19,7 +18,7 @@ body{
 .clearfix:before,
 .clearfix:after{
   display: table;
-  content: :"";
+  content: "";
 }
 
 .clearfix:after{
@@ -71,19 +70,19 @@ body{
   bottom: -1px;
 }
 
-.BookList ul{
+.BooksList ul{
   display: none;
 }
 
-.BookList.active ul{
+.BooksList.active ul{
   display: block;
 }
 
-.BookList li{
+.BooksList li{
   font-size: 14px;
 }
 
-.BookList li:not(:last-child){
+.BooksList li:not(:last-child){
   margin-bottom: 5px;
 }
 
@@ -115,8 +114,4 @@ body{
 
 .AddBook button {
   float: right;
-}
-
-.tabs-data{
-  clear: both;
 }
