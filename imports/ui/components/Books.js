@@ -1,5 +1,6 @@
 import React from 'react';
 import BooksList from './BooksList';
+import AddBook from './AddBook';
 
 export default class Books extends React.Component{
 
@@ -22,7 +23,7 @@ export default class Books extends React.Component{
     return (
       <div className="Books">
         <h4>{`${this.props.firstName}'s`} Books </h4>
-
+        <AddBook />
         <ul className="tabs clearfix">
           <li onClick={this.handleChangeTabs} className={`tab ${this.setActiveClassOnTab('read')}`} data-tab="read">Read</li>
           <li onClick={this.handleChangeTabs} className={`tab ${this.setActiveClassOnTab('unread')}`} data-tab="unread">Unread</li>
