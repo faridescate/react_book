@@ -28,17 +28,17 @@ export default Books = React.createClass({
 
           <div id="read-books" className={`BooksList ${this.isActiveTab('read')}`}>
             <ul className="books">
-              <li>Liminal Thinking by Dave Gray</li>
-              <li>Personal History by Katharine Graham</li>
-              <li>Bonr Standing Up by Steve Martin</li>
+              {this.props.readBooks.map((book) => {
+                return (<li key={book.title} className="Book">{book.title} by {book.author} </li> );
+              })}
             </ul>
           </div>
 
           <div id="read-books" className={`BooksList ${this.isActiveTab('unread')}`}>
             <ul className="books">
-              <li className="book">The Course of Love by Alain De Botton</li>
-              <li className="book">Too Soon Old, Too Late Smart by Gordon Livingston</li>
-              <li className="book">Servant Leadership by Robert K. Greenleaf</li>
+              {this.props.unreadBooks.map((book) => {
+                return (<li key={book.title} className="Book">{book.title} by {book.author} </li> );
+              })}
             </ul>
           </div>
 
